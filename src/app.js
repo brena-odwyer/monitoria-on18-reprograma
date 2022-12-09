@@ -9,4 +9,7 @@ db.connect();
 app.use(express.json());
 app.use(cors());
 
+const livroRotas = require("./routes/livros")
+app.use("/livros", livroRotas)
+
 module.exports = app;
